@@ -8,6 +8,7 @@ import ApplicationToolbar from '../../components/ApplicationToolbar';
 import { InvoiceActions } from '../invoices/InvoiceActions';
 import Logout from '../log-in-out/Logout';
 import OfferActions from '../offers/OfferActions';
+import UserMenu from '../user-menu';
 import PageName from './PageName';
 
 export default function TopBar() {
@@ -37,7 +38,7 @@ export default function TopBar() {
       return <InvoiceActions />;
     }
     if (isRootLocation) {
-      return <Logout />;
+      return <UserMenu />;
     }
     return <Box width={40} />;
   }, [location, isRootLocation]);
